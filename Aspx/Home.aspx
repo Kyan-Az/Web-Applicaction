@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6
         </div>
         <div>
             <h3>Title</h3>
-            <p>lorem impsum lorem impsum lorem impsum lorem impsum lorem impsum lorem impsum.</p>
+            <p>lmeep.</p>
         </div>
     </div>
 </div>

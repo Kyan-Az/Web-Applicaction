@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Aspx_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif}
+.mySlides {display: none}
+.w3-padding-large { padding: 12px 24px !important; }
+.navigation { padding: 6px 5px; display: flex;
+    justify-content: space-between; background: #f6f6f4;} 
+    .left-nav {
+       flex:1;
+       display:flex;
+       align-items:center; 
+        }
+      .logo img {
+          width: 50px;
+          }  
+          
+           .right-nav {
+       display:flex;
+       align-items:center; 
+        }
+        
+        .nav-link 
+        {
+            text-transform: uppercase;
+            }
+            
+            .nav-link .icon 
+            {
+                margin-left: 4px;
+                }
+          
+</style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    <!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar navigation w3-card">   
+    <div class="left-nav">
+    <a href="Home.aspx" class="logo"><img src="../Images/Logo.png" /></a>
+    <a href="News.aspx" class="w3-bar-item w3-button w3-padding-large w3-hide-small nav-link">News</a>
+    <a href="Blogs.aspx" class="w3-bar-item w3-button w3-padding-large w3-hide-small nav-link">Blogs</a>
+    <a href="WareHouses.aspx" class="w3-bar-item w3-button w3-padding-large w3-hide-small nav-link">WareHouses</a>
+    <a href="Accessories.aspx" class="w3-bar-item w3-button w3-padding-large w3-hide-small nav-link">Accessories</a>
+    </div>
+    <div class="right-nav">
+    <a href="Services.aspx" class="w3-bar-item w3-button w3-padding-large w3-hide-small nav-link">Services</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button nav-link" title="More">More<i class="icon fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        
+          <asp:LinkButton ID="LinkButtonLogin" runat="server" 
+              CssClass="w3-bar-item w3-button" Text="Login" onclick="LinkButtonLogin_Click"></asp:LinkButton>
+        
+          <asp:LinkButton ID="LinkButtonAccount" runat="server" 
+              CssClass="w3-bar-item w3-button" Text="Account Settings" 
+              onclick="LinkButtonAccount_Click"></asp:LinkButton>
+        
+          <asp:LinkButton ID="LinkButtonSignup" runat="server" 
+              CssClass="w3-bar-item w3-button" Text="Sign up" 
+              onclick="LinkButtonSignup_Click"></asp:LinkButton>
+
+          <asp:LinkButton ID="LinkButtonAdmin" runat="server" 
+              CssClass="w3-bar-item w3-button" Text="Admin Page" 
+              onclick="LinkButtonAdmin_Click"></asp:LinkButton>
+
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

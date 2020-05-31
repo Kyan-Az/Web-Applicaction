@@ -40,6 +40,11 @@ public class ClassUsers
         SQL = SQL + "VALUES ('{0}','{1}','{2}','{3}')";
         SQL = string.Format(SQL, UserFullName, UserEmail, UserPassWord, UserType);
         Dbase.ChangeTable(SQL, "DB.accdb");
+
+        string SQL2 = "INSERT INTO [Carts] ([CartID],[CartProduct])";
+        SQL2 += "VALUES ('{0}','')";
+        SQL2 = string.Format(SQL2, GetUserID(UserEmail));
+        Dbase.ChangeTable(SQL2, "DB.accdb");
     }
 
     //Get all users as data table

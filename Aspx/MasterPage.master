@@ -51,8 +51,7 @@ body {font-family: Arial, Helvetica, sans-serif}
 <div class="w3-top">
   <div class="w3-bar navigation w3-card">   
     <div class="left-nav">
-    <a href="Home.aspx" class="logo"><img src="../Images/Logo.png" /></a>
-    <a href="News.aspx" class="w3-bar-item w3-button w3-padding-large w3-hide-small nav-link">News</a>
+    <a href="Home.aspx" class="logo"><img src="../Images/Logo.png" /></a>    
     <a href="Blogs.aspx" class="w3-bar-item w3-button w3-padding-large w3-hide-small nav-link">Blogs</a>
     <a href="WareHouses.aspx" class="w3-bar-item w3-button w3-padding-large w3-hide-small nav-link">WareHouses</a>
     <a href="Accessories.aspx" class="w3-bar-item w3-button w3-padding-large w3-hide-small nav-link">Accessories</a>

@@ -13,7 +13,14 @@ public partial class Aspx_Contacts : System.Web.UI.Page
     }
     protected void ButtonSubmit_Click(object sender, EventArgs e)
     {
-        ClassContacts.AddContactMessage(ClassUsers.GetUserID(TextBoxEmail.Text), TextBoxName.Text, TextBoxEmail.Text, TextBoxSubject.Text);
-        Response.Redirect("Home.aspx"); //Make it so it shows done message!
+        try
+        {
+            ClassContacts.AddContactMessage(ClassUsers.GetUserID(TextBoxEmail.Text), TextBoxName.Text, TextBoxEmail.Text, TextBoxSubject.Text);
+            Response.Redirect("Home.aspx"); //Make it so it shows done message!
+        }
+        catch (Exception Ex)
+        {
+            LabelMsg.Text ="Error When Sending Message::"+ Ex.Message;
+        }
     }
 }

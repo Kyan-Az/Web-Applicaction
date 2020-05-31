@@ -76,8 +76,7 @@ input[type=submit]:hover {
 </head>
 <body>
 
-<h2>Responsive Contact Section</h2>
-<p>Resize the browser window to see the effect.</p>
+
 
 <div class="container">
   <div style="text-align:center">
@@ -102,6 +101,8 @@ input[type=submit]:hover {
         
       <asp:Button ID="ButtonSubmit" runat="server" Text="Submit" 
             onclick="ButtonSubmit_Click" />
+            <br />
+      <asp:Label ID="LabelMsg" runat="server" Text=""></asp:Label>
       </form>
     </div>
   </div>
